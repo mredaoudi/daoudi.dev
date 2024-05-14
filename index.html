@@ -36,54 +36,64 @@
 				text-decoration: none;
 				color: #99CCFF
 			}
+			.header img{
+				width: 150px;
+				border-radius: 100px;
+			}
+			.intro {
+				font-size: 16px;
+			}
 			.achievements {
 				display: flex;
+				flex-direction: column;
 				text-align: left;
+				align-items: center;
 				justify-content: center;
-			}
-			.achievements .section {
-				width: 50%;
+				margin-bottom: 2em;
 			}
 			.achievements li {
 				font-weight: 500;
 			}
-			.tech {
+			.achievements .comment {
+				font-size: 12px;
+			}
+			.achievements .tech {
 				font-size: smaller;
 				font-family: 'IBM Plex Mono';
 				color: #CD5C5C;
 			}
-			.ampersand {
+			.achievements .ampersand {
 				font-size: x-small;
 			}
-			@media (max-width: 600px) {
-				.achievements {
-					flex-direction: column;
-					align-items: center;
-				}
-				.achievements .section {
-					width: 100%;
-				}
+			.links {
+				display: flex;
+				justify-content: center;
+				gap: 2em;
+				margin: 2em;
+			}
+			.links img {
+				max-width: 40px;
 			}
 		</style>
 	</head>
 	<body>
-		<div>
-			<img src="profile.jpeg" width="100px" style="border-radius: 100px;"/>
+		<div class="header">
+			<img src="profile.jpeg"/>
 		</div>
 		<h2>Mohammed-Reda Daoudi's webpage</h2>
-		<p>Welcome to my personal webpage. My name is Mohammed-Reda and I'm a web developer and an iron age enthusiast.
+		<p class="intro">Welcome to my personal webpage. My name is Mohammed-Reda, I'm a developer by trade and an iron age enthusiast.
 			While my dream in this life is to witness a world devoid of technology, for now, I thrive in the belly of the beast.
-			Feel free to roam around! </p>
+		</p>
 		<div class="achievements">
 			<div class="section">
 				<h3>Projects</h3>
 				<ul>
 					<li>perfin - <span class="tech">Django</span></li>
-					<li>svelte-slider - <span class="tech">SvelteKit</span></li>
 					<li>qadaa - <span class="tech">Flutter</span></li>
 					<li>arabickeyboard - <span class="tech">Flutter (Desktop)</span></li>
+					<li>svelte-slider - <span class="tech">SvelteKit</span></li>
 				</ul>
-				<p>Source code for the projects above can be found in <a href="https://github.com/mredaoudi?tab=repositories">my github page</a>.</p>
+				<p class="comment">Source code for the projects above can be found in <a href="https://github.com/mredaoudi?tab=repositories">my github page</a>.</p>
 			</div>
 			<div class="section">
 				<h3>Experience</h3>
@@ -94,8 +104,16 @@
 				</ul>
 			</div>
 		</div>
-		<p>
-
-		</p>
+		<div>
+			Below are links to my work/dev stuff. I don't have any "socials" because let's be frank, my opinion on cultural event #986776 does not matter anyway.
+		</div>
+		<div class="links">
+			<a href="https://github.com/mredaoudi">
+				<img src="github.svg">
+			</a>
+			<a href="https://linkedin.com/in/mredaoudi">
+				<img src="linkedin.svg">
+			</a>
+		</div>
 	</body>
 </html>
